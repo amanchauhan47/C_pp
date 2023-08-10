@@ -3,12 +3,9 @@ using namespace std;
 
 int main()
 {
-    //int a;
-    float b;
-    char c;
-    bool d;
+    int a = 2;
 
-    cout << "Size of int is "  << sizeof(int)  << endl;
+    cout << "Size of int is "  << sizeof(a)  << endl;
     cout << "Size of float is "<< sizeof(float)<< endl;
     cout << "Size of char is " << sizeof(char) << endl;
     cout << "Size of bool is " << sizeof(bool) << endl;

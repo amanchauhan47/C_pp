@@ -11,5 +11,5 @@ int main()
     cin >> a;
 
     cout << "a = " << a << endl;
-
+    return 0;
 }
