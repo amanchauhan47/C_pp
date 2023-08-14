@@ -6,7 +6,7 @@ int main()
     int a;
     cin >> a;
     cout << a << endl;
-    cout << "Welcome to cppp";
+    cout << "Welcome to cppp" << endl;
 
     return 0;
 }
