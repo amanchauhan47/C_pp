@@ -9,17 +9,21 @@ int main()
 
     switch(a)
     {
-        case 'a': cout << "Apple\n";
+        case 'a': 
+            cout << "Apple\n";
             break;
         
-        case 'b': cout << "Ball\n";
+        case 'b': 
+            cout << "Ball\n";
             break;
 
-        case 'c': cout << "Cat\n";
+        case 'c':
+            cout << "Cat\n";
             break;
         
         default:
             cout << "Still Learning.\n";
             break;
     }
+    return 0;
 }
