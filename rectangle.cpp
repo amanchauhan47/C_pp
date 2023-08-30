@@ -2,9 +2,16 @@
 using namespace std;
 int main()
 {   
-    for(int i=1;i<=5;i++)
+    int row, col;
+
+    cout << "Enter the row of rectangle: ";
+    cin >> row;
+    cout << "Enter the column of rectangle: ";
+    cin >> col;
+
+    for(int i=1;i<=row;i++)
     {
-        for(int i=1;i<=4;i++)
+        for(int i=1;i<=col;i++)
         {
             cout << "* ";
         }
