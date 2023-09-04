@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 int main()
-{   //to be continue today      
+{        
     int n;
     int a = 1;
     cout << "Enter the rows of pyramid: ";
