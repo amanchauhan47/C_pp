@@ -13,25 +13,23 @@ int main()
         {
             cout << "  ";
         }
-        for(int k=1;k<=b;k++)
+        for(int j=1;j<=2*i-1;j++)
         {
             cout << "* ";
         }
-        b = b+2;
         cout << endl;
     }
-    b = (n*2)-1;
+
     for(int i=n;i>=1;i--)
     {
         for(int j=i;j<=n-1;j++)
         {
             cout << "  ";
         }
-        for(int k=1;k<=b;k++)
-        {   
+        for(int j=1;j<=2*i-1;j++)
+        {
             cout << "* ";
         }
-        b = b-2;
         cout << endl;
     }
     return 0;
