@@ -1,8 +1,10 @@
 #include<iostream>
+//static variable holds same value for different objects, otherwise variable value is set to default for each object;
 using namespace std;
+
 class student{
     int roll;
-    static int count;      //static variable holds same value for different objects, otherwise variable value is set to default for each object;
+    static int count;   //we can't initialise static variable here like count = 10;   
     public:
     void getinfo(int r){
         count ++;
@@ -12,7 +14,7 @@ class student{
         cout << "Roll no. of Student " << count << " is " << roll << endl;
     }
 };
-int student :: count;       //Default value of static variable is 0;
+int student :: count;       //Default value of static variable is 0, we can intialise static variable here.
 
 int main()
 {
