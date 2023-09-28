@@ -23,5 +23,8 @@ int main()
     int n = 5, r = 3;
 
     cout << "NCR is " << ncr(n,r) << endl;
+
+    //or
+    cout << factor(n)/(factor(r)*factor(n-r)) << endl;
     return 0;
 }
