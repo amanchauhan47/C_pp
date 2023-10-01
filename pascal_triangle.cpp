@@ -8,7 +8,14 @@ int fact(int n){
     return factorial;
 }
 int main()
-{
-    cout << fact(5) << endl;
+{   
+    int n = 5, r = 0;
+    //cout << fact(1) << endl;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<=i;j++){
+            cout << fact(i)/(fact(j)*fact(i-j)) << " ";
+        } 
+        cout << endl;
+    }
     return 0;
 }
