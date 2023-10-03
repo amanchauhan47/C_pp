@@ -1,5 +1,5 @@
 #include<iostream>
-//static variable holds same value for different objects, otherwise variable value is set to default for each object;
+//static variable or static data member holds same value for different objects, otherwise variable value is set to default for each object;
 using namespace std;
 
 class student{

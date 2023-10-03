@@ -9,11 +9,11 @@ int main()
     cout << "Enter the number: ";
     cin >> num;
     cin >> num2;
-    cout << fact(num) << endl;
+    cout << fact(num) << endl;      //passing arguments
     cout << fact(num2) << endl;
     return 0;
 }
-int fact(int n)
+int fact(int n) //parameters
 {   
     int f=1;
     for(int i=1;i<=n;i++)
