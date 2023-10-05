@@ -20,4 +20,6 @@ int main()
     student s1;
     student s2(4);
     student s3(s2);
+    
+    return 0;
 }
