@@ -20,6 +20,7 @@ int main()
     student s1;
     student s2(4);
     student s3(s2);
+    //student s3 = s2;      //another method to call use copy constructor.
     
     return 0;
 }
