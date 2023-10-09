@@ -6,23 +6,29 @@ class student{
     int age;        //data members(variables)
     bool gender;
     void printinfo(){
-        cout << 
+        cout << "Name = " << name << endl;
+        cout << "Age = " << age << endl;
+        cout << "Gender = " << gender << endl << endl;
     }
 };
 int main()
 {
-    student a,b,c; //object of student class
-    a.name = "Aman";    
-    a.age = 20;
-    a.gender = 1;
-
-    b.name = "Shivi";
-    b.age = 19;
-    b.gender = 0;
+    student arr[3]; //object of student class
     
-    c.name = "Rahul";
-    c.age = 21;
-    c.gender = 1;
+    for(int i=0;i<3;i++)
+    {
+        cout << "Name = ";
+        cin >> arr[i].name;
 
+        cout << "Age = ";
+        cin >> arr[i].age;
+
+        cout << "Gender = ";
+        cin >> arr[i].gender;
+    }
+    for(int i=0;i<3;i++)
+    {
+        arr[i].printinfo();
+    }
     return 0;
 }

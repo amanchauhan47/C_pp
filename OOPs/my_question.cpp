@@ -1,8 +1,9 @@
 #include<iostream>
 using namespace std;
 class item{
+    static int i;
     public:
-    int i=1,n;
+    int n;
     int price[i];
     void getinfo(){
         cout << "How many items you wanna add?" << endl;
@@ -16,6 +17,7 @@ class item{
     }
 
 };
+int item :: i = 1;
 int main()
 {
 
