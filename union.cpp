@@ -7,7 +7,10 @@ union Student{
 };
 int main()
 {
-    union Student s1;
+    union s1;
+    s1.name = "Aman";
+    cout << s1.name << endl;
+    
     
     return 0;
 }
