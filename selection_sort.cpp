@@ -1,10 +1,10 @@
-#include<iostream>//                 SELECION SORT (Self Created)..                     22-10-23
+#include<iostream>//                 SELECION SORT (Self Created)..                     22-10-23;
 #include"My_Header_files/anonymous.h"
 #include<climits>
 using namespace std;
 int main()
 {
-    int arr[5] = {5,40,3,2,10};
+    int arr[5] = {5,4,3,2,1};
     int num = INT_MAX;
     int index;
     for(int j=0;j<5;j++){
