@@ -7,7 +7,7 @@ int main()
     int arr[5] = {5,4,3,2,1};
     int num = INT_MAX;
     int index;
-    for(int j=0;j<5;j++){
+    for(int j=0;j<4;j++){
         num = INT_MAX;
         for(int i=j;i<5;i++){
             if(arr[i] < num){

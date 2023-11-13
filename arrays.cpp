@@ -5,7 +5,7 @@ int main()
 {
     int array[5] = {2,3};   //remaining elements will be initialised with 0.
 
-    //int array[5] = {0}; // all will be initialised with 0.
+    //int array[5] = {0}; // all elements will be initialised with 0.
 
     //arr(array,5);
     //cout << fact(5);
