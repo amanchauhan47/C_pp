@@ -6,15 +6,20 @@ class alpha{
     // alpha(){
     //     cout << "Default Contructor." << endl;
     // }
-    alpha(int x){
+    alpha(int x){ //paramatrised contructor
         a = x;
-        cout << x << endl;
+        cout << a << endl;
+    }
+    alpha(alpha &b){
+        a = b.a;
+        cout << a << endl;
     }
 };
 int main()
 {
     // alpha a1;
-    alpha a2(4);
+    alpha a2(5);
+    alpha a3(a2);
 
     return 0;
 }

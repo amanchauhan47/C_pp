@@ -1,4 +1,5 @@
 #include<iostream>
+#include<climits>
 using namespace std;
 class Array{
     public:         //data representation
@@ -6,15 +7,17 @@ class Array{
     int size;
     int length;
 };
+//operations
 void display(class Array arr);
 void LinearSearch(class Array arr, int n);
 void replace(class Array arr, int index, int n);
 void get(class Array arr, int index);
-void insert(class Array arr, int n, int x);
+void insert(class Array *arr, int n, int x);
 void reversePrint(class Array arr);
-void append(class Array arr, int n);
-void remove(class Array arr, int x);
-
+void append(class Array *arr, int n);
+void remove(class Array *arr, int x);
+int Min(class Array arr);
+int Max(class Array arr);
 
 int main()
 {
@@ -35,18 +38,19 @@ int main()
     //replace(arr,1,47);
     //LinearSearch(arr,10);
     //get(arr,0);
-    insert(arr,14,3);
+    //insert(&arr,14,5);
     //reversePrint(arr);
-    //append(arr,47);
-    ////remove(arr,2);
+    //append(&arr,47);
+    //remove(&arr,4);
+    //cout << Min(arr) << endl;
+    //cout << Max(arr) << endl;
     display(arr);
     return 0;
 }
 
-
 //operations
 void display(class Array arr){
-    for(int i=0;i<arr.length+1;i++)
+    for(int i=0;i<arr.length;i++)
         cout << arr.ptr[i] << "\t";
     cout << endl;
 }
@@ -55,7 +59,7 @@ void LinearSearch(class Array arr, int n){
         if(n == arr.ptr[i]){
             cout << n << " key found at index " << i << endl; 
             return;
-        }
+        }   
     }
     cout << "Key not found.\n";
 }
@@ -65,11 +69,17 @@ void replace(class Array arr, int index, int n){
 void get(class Array arr, int index){
     cout << arr.ptr[index] << " is at index " << index << endl;
 }
-void insert(class Array arr, int n, int x){
-    for(int i=arr.length;i>=x;i--){
-        arr.ptr[i] = arr.ptr[i-1];
+void insert(class Array *arr, int n, int index){
+    if((index >= 0 && index <= arr->length) && (arr->size > arr->length)){ // and also check index should lie between 0 to arr.length
+        for(int i=arr->length;i>=index;i--){
+            arr->ptr[i] = arr->ptr[i-1];
+        }
+        arr->ptr[index] = n;
+        arr->length++;
     }
-    arr.ptr[x] = n;
+    else{
+        cout << "Not possible to be insert.\n";
+    }
 }
 
 void reversePrint(class Array arr){
@@ -77,13 +87,41 @@ void reversePrint(class Array arr){
         cout << arr.ptr[i] << endl;
     }
 }
-void append(class Array arr, int n){
-    arr.ptr[arr.length] = n;
+void append(class Array *arr, int n){
+    if(arr->size > arr->length){       //array size should be greater then array length 
+        arr->ptr[arr->length] = n;
+        arr->length++;   //or we can do arr->ptr[arr-length++] = n;
+    }
+    else{
+        cout << "No enough space available.\n";
+    }
 }
-void remove(class Array arr, int x){
-    for(int i=arr.length-1;i>=0;i--){
-        if(i >= x){
-            arr.ptr[i] = arr.ptr[i+1];
+void remove(class Array *arr, int x){
+    if(x >= 0 && x < arr->length){
+        for(int i=x;i<arr->length-1;i++){
+            arr->ptr[i] = arr->ptr[i+1];
+        }
+        arr->length--;
+    }
+    else{
+        cout << "Invalid index.\n";
+    }
+}
+int Min(class Array arr){
+    int num = INT_MAX;
+    for(int i=0;i<arr.length;i++){
+        if(arr.ptr[i] < num){
+            num = arr.ptr[i];
         }
     }
+    return num;
+}
+int Max(class Array arr){
+    int num = INT_MIN;
+    for(int i=0;i<arr.length;i++){
+        if(arr.ptr[i] > num){
+            num = arr.ptr[i];
+        }
+    }
+    return num;
 }
