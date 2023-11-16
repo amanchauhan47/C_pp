@@ -9,7 +9,7 @@ class Array{
 };
 //operations
 void display(class Array arr);
-void LinearSearch(class Array arr, int n);
+int LinearSearch(class Array arr, int n);
 void replace(class Array arr, int index, int n);
 void get(class Array arr, int index);
 void insert(class Array *arr, int n, int x);
@@ -36,7 +36,7 @@ int main()
         cin >> arr.ptr[i];
     }
     //replace(arr,1,47);
-    //LinearSearch(arr,10);
+    cout << LinearSearch(arr,10) << endl;
     //get(arr,0);
     //insert(&arr,14,5);
     //reversePrint(arr);
@@ -54,14 +54,13 @@ void display(class Array arr){
         cout << arr.ptr[i] << "\t";
     cout << endl;
 }
-void LinearSearch(class Array arr, int n){
+int LinearSearch(class Array arr, int n){
     for(int i=0;i<arr.length;i++){
         if(n == arr.ptr[i]){
-            cout << n << " key found at index " << i << endl; 
-            return;
+            return i;
         }   
     }
-    cout << "Key not found.\n";
+    return -1;
 }
 void replace(class Array arr, int index, int n){
     arr.ptr[index] = n;
