@@ -9,7 +9,6 @@ int main(){
     //RevMethod1(arr,5);
     RevMethod2(arr,5);
     display(arr,5);
-    
     return 0;
 }
 void RevMethod1(int arr[], int n){
