@@ -10,6 +10,7 @@ class Array{
 //operations
 void display(class Array arr);
 int LinearSearch(class Array arr, int n);
+int BinarySearch(class Array arr, int key);
 void replace(class Array arr, int index, int n);
 void get(class Array arr, int index);
 void insert(class Array *arr, int n, int x);
@@ -36,7 +37,8 @@ int main()
         cin >> arr.ptr[i];
     }
     //replace(arr,1,47);
-    cout << LinearSearch(arr,10) << endl;
+    //cout << LinearSearch(arr,10) << endl;
+    cout << BinarySearch(arr,8) << endl;
     //get(arr,0);
     //insert(&arr,14,5);
     //reversePrint(arr);
@@ -44,6 +46,7 @@ int main()
     //remove(&arr,4);
     //cout << Min(arr) << endl;
     //cout << Max(arr) << endl;
+
     display(arr);
     return 0;
 }
@@ -59,6 +62,25 @@ int LinearSearch(class Array arr, int n){
         if(n == arr.ptr[i]){
             return i;
         }   
+    }
+    return -1;
+}
+int BinarySearch(class Array arr, int key){
+    int i,a,b;
+    a = 0;
+    b = arr.length-1;
+    
+    while(a<=b){
+        i = (a+b)/2;
+        if(arr.ptr[i] == key){
+            return i;
+        }
+        else if(arr.ptr[i] < key){
+            a = i+1;
+        }
+        else{//arr.ptr[i] > key
+            b = i-1; 
+        }
     }
     return -1;
 }
