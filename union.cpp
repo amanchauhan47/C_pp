@@ -11,6 +11,5 @@ int main()
     s1.name = "Aman";
     cout << s1.name << endl;
     
-    
     return 0;
 }
