@@ -60,5 +60,4 @@ int main()
 get();
 replace();
 reverse();
-
 */

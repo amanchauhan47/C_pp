@@ -1,1 +1,1 @@
-a
+rightshift(arr,5);

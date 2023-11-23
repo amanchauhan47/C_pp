@@ -77,14 +77,17 @@ int sum(class Array arr, int n){            //How this is working...
     }
 }
 void reverse(class Array arr){
-    int rev[arr.length];
+    // int rev[arr.length];
+    int *rev;
+    rev = new int[arr.length];  // created array in heap.
     for(int i=arr.length-1,j=0; i>=0; i--,j++)
     {
         rev[j] = arr.ptr[i];
     }
-    for(int i=0;i<5;i++){
+    for(int i=0;i<arr.length;i++){
         arr.ptr[i] = rev[i];
     }
+    delete []rev;   //then release the array after use.
 }
 int BinarySearch(class Array arr, int key){
     int i,a,b;
