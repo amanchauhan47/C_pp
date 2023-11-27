@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-//still some problems with this program;
+//                           Insert in Sorted Array (Self Created)
 class Array{
     public:
     int *ptr;
@@ -11,6 +11,7 @@ void insertsorted(class Array *arr, int n);
 void display(class Array arr);
 int main(){
     Array arr;
+    int n;
     cout << "Enter the size of array: ";
     cin >> arr.size;
 
@@ -22,8 +23,9 @@ int main(){
     for(int i=0;i<arr.length;i++){
         cin >> arr.ptr[i];
     }
-
-    insertsorted(&arr, 1);
+    cout << "Enter the element u wanna insert: ";
+    cin >> n;
+    insertsorted(&arr, n);
     display(arr);
     return 0;  
 }
@@ -31,6 +33,7 @@ void insertsorted(class Array *arr, int n){
     for(int i=arr->length-1;i>=0;i--){
         if(arr->ptr[i] > n){
             arr->ptr[i+1] = arr->ptr[i];
+            arr->ptr[i] = n;
         }
         else{
             arr->ptr[i+1] = n;
