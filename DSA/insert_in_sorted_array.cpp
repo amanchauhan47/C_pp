@@ -30,16 +30,12 @@ int main(){
     return 0;  
 }
 void insertsorted(class Array *arr, int n){
-    for(int i=arr->length-1;i>=0;i--){
-        if(arr->ptr[i] > n){
-            arr->ptr[i+1] = arr->ptr[i];
-            arr->ptr[i] = n;
-        }
-        else{
-            arr->ptr[i+1] = n;
-            break;
-        }
+    int i = arr->length-1;
+    while(i>=0 && arr->ptr[i] >= n){
+        arr->ptr[i+1] = arr->ptr[i];
+        i--;
     }
+    arr->ptr[i+1] = n;
     arr->length++;
 }
 void display(class Array arr){
