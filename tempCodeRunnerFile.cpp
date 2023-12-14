@@ -1,1 +1,1 @@
-student s1;
+name

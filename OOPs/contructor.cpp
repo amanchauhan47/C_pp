@@ -17,7 +17,7 @@ class student{
 };
 int main()
 {
-    student s1;
+    student s1;          //without default constructor we can't create an default object (ya to default object mat create mt kro ya to default constructor banao)
     student s2(4);
     student s3(s2);
     //student s3 = s2;      //another method to call use copy constructor.

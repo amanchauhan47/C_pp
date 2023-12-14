@@ -1,1 +1,3 @@
-rightshift(arr,5);
+void print(){
+        cout << "hello";
+    }
