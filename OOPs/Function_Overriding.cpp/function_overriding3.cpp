@@ -1,5 +1,4 @@
 #include<iostream>
-//                      Call Overridden Function Using Pointer
 using namespace std;
 class A{
     public:
@@ -10,18 +9,14 @@ class A{
 class B : public A{
     public:
     void fun(){
-        cout << "Derived Class\n";
+        cout << "Derived class\n";
     }
 };
 int main()
 {
     B b1;
-    A *a1 = &b1;
-    a1->fun();
-
-    // A a1;
-    // B *b1 = &a1;         //not working
-    // b1->fun();
-
+    b1.fun();
+    b1.A::fun();
+    
     return 0;
 }
