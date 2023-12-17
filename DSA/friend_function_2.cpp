@@ -3,8 +3,8 @@ using namespace std;
 //A friend function is used to access all the non-public members of a class
 class alpha{
     int a,b;
-
     public:
+
     void setdata(int x, int y){
         a = x;
         b = y;
