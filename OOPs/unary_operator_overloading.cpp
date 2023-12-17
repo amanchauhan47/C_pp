@@ -26,7 +26,7 @@ class complex{
 int main()
 {
     complex c1(5,10);
-    --c1;
+    --c1;   //c1.operator --();
 
     c1.print();
     return 0;
