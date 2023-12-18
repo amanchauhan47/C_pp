@@ -1,33 +1,24 @@
 #include<iostream>
+//                  Prefix unary operator overloading 
 using namespace std;
 class complex{
-    int real;
-    int imag;
-
+    int num;
     public:
-    complex(){
-        real = 0;
-        imag = 0;
-    }
-    complex(int r, int i){
-        real = r;
-        imag = i;
+    complex(int x){
+        num = x;
     }
     void print(){
-        cout << real << endl;
-        cout << imag << endl;
+        cout << num << endl;
     }
     //operator overloading syntax;
-    void operator --(){
-        --real;
-        --imag;
+    void operator ++(){
+        num++;
     }
 };
-int main()
-{
-    complex c1(5,10);
-    --c1;   //c1.operator --();
-
+int main(){
+    complex c1(5);
+    c1.print();
+    ++c1;       //c1.operator ++();
     c1.print();
     return 0;
 }

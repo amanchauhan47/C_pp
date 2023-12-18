@@ -25,7 +25,12 @@ int main()
     a1.setdata(5, 8);
     a2.setdata(1,6);
 
-    a3 = a1 + a2;
+    a3 = a1 + a2;   //a1.operator +(a2);
     a3.display();
+
+    alpha a4;
+    a4 = a3 + a1;   //a4 = a3.operator +(a1);   this happens behind the scene
+    a4 = a3.operator +(a1); //this will also work
+    a4.display();
     return 0;
 }
