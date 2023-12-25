@@ -15,13 +15,13 @@ class complex{
         cout << real << " + " << imag << "i" << endl;
     } 
     //syntax;
-    friend complex operator +(complex c);
+    friend complex operator +(complex &c1, complex &c2);
 };
-complex operator +(complex c)
+complex operator +(complex &c1, complex &c2)
 {
     complex sum;
-    sum.real = real + c.real;
-    sum.imag = imag + c.imag;
+    sum.real = c1.real + c2.real;
+    sum.imag = c1.imag + c2.imag;
         
     return sum;
 }
@@ -29,7 +29,7 @@ int main()
 {
     complex c1(2,5);
     complex c2(1,4);
-    complex c3(3,1);
+    complex c3;
     c3 = c1+c2; //c3 = c1.add(c2);
 
     c3.print();
