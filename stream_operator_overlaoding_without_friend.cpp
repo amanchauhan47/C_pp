@@ -1,13 +1,19 @@
 #include<iostream>
 using namespace std;
 class complex{
-    int a, b;
     public:
+    int a, b;
 
-    istream& operator >>(complex &c){
-    cin >> c.a >> c.b;
-    return cin;
-}
+   // istream& operator >>(complex &c){
+    //cin >> c.a >> c.b;
+    //return cin;
+};
+class istream : public complex{
+    public:
+    complex operator >>(complex &c){
+        cin >> c.a;
+        return c;
+    }
 };
 
 int main()
