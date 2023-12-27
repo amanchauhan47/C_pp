@@ -1,14 +1,20 @@
 #include<iostream>
 using namespace std;
-struct X
-{
-    std::ostream operator<<(int y)
-    {
-        return std::cout << y << " -- An int\n";
-    }
+class complex{
+    int a, b;
+    public:
+
+    istream& operator >>(complex &c){
+    cin >> c.a >> c.b;
+    return cin;
+}
 };
+
 int main()
 {
-    X   x;
-    x << 5;
+    complex c1;
+    cin >> c1;         //operator>>(cin, c1);
+   // cout << c1;
+    
+    return 0;
 }

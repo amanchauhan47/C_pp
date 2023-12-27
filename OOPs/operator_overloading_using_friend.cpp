@@ -30,7 +30,7 @@ int main()
     complex c1(2,5);
     complex c2(1,4);
     complex c3;
-    c3 = c1+c2; //c3 = c1.add(c2);
+    c3 = c1 + c2;   //c3 = operator +(c1, c2);
 
     c3.print();
 
