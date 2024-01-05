@@ -1,5 +1,6 @@
 *
 !*.cpp
+!*.cap
 !.gitignore
 <<<<<<< HEAD
 /C
@@ -8,4 +9,5 @@
 >>>>>>> origin
 !/OOPs
 !/OOPs/Function_Overriding
+!/FILE_HANDLING
 !/DSA
