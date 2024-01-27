@@ -1,6 +1,7 @@
 *
 !*.cpp
 !*.cap
+!*.txt
 !.gitignore
 <<<<<<< HEAD
 /C
