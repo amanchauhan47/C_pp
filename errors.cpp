@@ -3,7 +3,8 @@ using namespace std;
 int main()
 {
     float f = 4.0;
-    cout << f%2.0 << endl;
+    f = 4.0%2.0;
+    cout << f << endl;
 
     return 0;
 }
